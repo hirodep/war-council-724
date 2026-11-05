@@ -18,15 +18,43 @@
   th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
   th { color:var(--muted); font-weight:600; }
   li { margin:4px 0; }
+  /* Captain's To-Do: colors match the in-game faction icons */
+  :root { --todo-bg:#fff6dc; --todo-line:#c9971c; --shoot:#7a3fb0; --ride:#c8641a; --fight:#2a63b8; --cmd:#9a7414; }
+  @media (prefers-color-scheme: dark) { :root { --todo-bg:#2a2414; --todo-line:#d6a93a; --shoot:#b98ae6; --ride:#f0995a; --fight:#7aa8f0; --cmd:#e2bd5a; } }
+  .todo { background:var(--todo-bg); border:2px solid var(--todo-line); border-radius:10px; padding:12px 16px 8px; margin:24px 0; }
+  .todo h2 { margin-top:4px; border-bottom-color:var(--todo-line); }
+  .todo ol { padding-left:0; list-style:none; margin:8px 0; }
+  .todo li { border-left:6px solid var(--muted); padding:6px 10px; margin:10px 0; background:rgba(127,127,127,.06); border-radius:4px; }
+  .todo li.shoot { border-left-color:var(--shoot); } .todo li.ride { border-left-color:var(--ride); }
+  .todo li.fight { border-left-color:var(--fight); } .todo li.cmd { border-left-color:var(--cmd); }
+  .tag { display:inline-block; font-size:.75rem; font-weight:700; color:#fff; padding:1px 7px; border-radius:9px; margin-right:6px; }
+  .tag.shoot { background:var(--shoot); } .tag.ride { background:var(--ride); } .tag.fight { background:var(--fight); } .tag.cmd { background:var(--cmd); }
+  @media (prefers-color-scheme: dark) { .tag { color:#151514; } }
+  .why { color:var(--muted); font-size:.88rem; display:block; margin-top:2px; }
 </style>
 </head>
 <body>
 <main>
 
 <h1>O'Clan War Council Board &mdash; State 724</h1>
-<p class="meta">Game: Dark War Survival &middot; Server: State 724 &middot; Alliance: AmIGo &middot; Last updated: 2026-11-04 &middot; Board version: 15</p>
+<p class="meta">Game: Dark War Survival &middot; Server: State 724 &middot; Alliance: AmIGo &middot; Last updated: 2026-11-05 &middot; Board version: 16</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Send decisions back through Captain Hiro; Vero (record keeper) updates the board.</p>
+
+<section class="todo">
+<h2>&#9873; Captain's To-Do (open items)</h2>
+<p class="meta">Things only Captain Hiro can do. Send each answer to Vero; Vero writes it up and removes it from this list. Colors match the in-game icons: <span class="tag shoot">Shooter</span><span class="tag ride">Rider</span><span class="tag fight">Fighter</span><span class="tag cmd">Captain</span> &middot; Added 2026-11-05</p>
+<ol>
+  <li class="shoot"><span class="tag shoot">VeroShot</span><strong>Send stage and owned heroes</strong> (hero screenshots).<span class="why">Vero needs these to write the Shooter reply to Mago's review and record VeroShot's roster.</span></li>
+  <li class="ride"><span class="tag ride">IronRonin</span><strong>Screenshot the hero pages</strong> for Kylie, Scarlett, Bob, Selena (level, stars, skills).<span class="why">Records the roster. Mago also asked for: stage objective, building unlocks, troop queues, resource costs.</span></li>
+  <li class="fight"><span class="tag fight">Teso-Ironbound</span><strong>Send stage/HQ level, and check whether the Fighter camp and Research Center are unlocked.</strong><span class="why">Teso's reply says both are in use; the board has not confirmed it yet.</span></li>
+  <li class="fight"><span class="tag fight">Teso-Ironbound</span><strong>Find the "125% power ratio" in the game</strong> (screenshot) or tell Teso to drop it.<span class="why">Guides only list +15% ATK/DEF for 3+ same-faction heroes.</span></li>
+  <li class="fight"><span class="tag fight">Teso-Ironbound</span><strong>Record the last 2 heroes:</strong> Bob and the Lv.1 black-haired hero.<span class="why">Completes Teso's roster (6 of 8 recorded).</span></li>
+  <li class="cmd"><span class="tag cmd">All accounts</span><strong>Send Day, HQ level and power for each account.</strong><span class="why">Section 4 still says "accounts not created" &mdash; out of date.</span></li>
+  <li class="cmd"><span class="tag cmd">Event</span><strong>Lord of Wasteland: screenshot each phase's task list when it opens.</strong><span class="why">Confirms what scores points, so we spend saved items on the right day.</span></li>
+  <li class="cmd"><span class="tag cmd">Decision</span><strong>Yes or no: post Mago's IronRonin review doc on this public board?</strong><span class="why">Anyone with the board link could read it.</span></li>
+</ol>
+</section>
 
 <h2>1. Council roster (locked by Captain's FIAT)</h2>
 <table>
@@ -128,6 +156,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-05</td><td>Captain's To-Do list added to the board; IronRonin 2nd build queue re-confirmed by Captain</td><td>Captain request</td></tr>
     <tr><td>2026-11-04</td><td>Lord of Wasteland event plan adopted: save upgrades for matching phase, aim for thresholds on all accounts</td><td>Captain approved</td></tr>
     <tr><td>2026-11-04</td><td>R4 titles promised for when AmIGo forms: Teso-Ironbound War God, IronRonin Recruiter</td><td>FIAT issued</td></tr>
     <tr><td>2026-11-04</td><td>Scarlett reset on Teso-Ironbound; EXP moved to Guy (now Lv.27)</td><td>Captain action</td></tr>
