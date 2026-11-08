@@ -1,9 +1,9 @@
 # Construction Contract 001 — "The Broken Bridge"
 
-**Status:** REVISION 2 · DRAFT for council review · not yet FIAT approved
+**Status:** REVISION 2 · council approved (Mago: pass with notes; Teso: support) · awaiting Captain's construction FIAT
 **Drafted by:** Vero, record keeper · Rev 1 and Rev 2: 2026-11-07
 **Covers:** the first playable build of the O'Clan game (Proposal 001)
-**Approval needed:** Mago confirms Rev 2 fixes his findings → Captain answers 4 decision cards → Captain's construction FIAT
+**Approval needed:** Captain answers 4 decision cards → Captain's construction FIAT
 
 > **In one sentence:** in 8 weeks (about 96 hours), build one small turn-based game where Captain and three AI teammates must share secrets to fix a broken bridge, with every move checked by Momo and every dollar capped.
 
@@ -143,7 +143,7 @@ Each gate must pass before the next starts. Hours are rough estimates out of 96.
 Gate 0 is a working program, not math on paper. It plays the game with scripted teams (no AI, no cost) and must show:
 
 1. At least one legal winning sequence of actions
-2. The win happens within 7 days
+2. The win happens **before that game's actual food deadline** (day 3, 4 or 5), not just within 7 days (Mago's note N1)
 3. No character ever takes more than 3 actions in a day
 4. Wood is counted correctly, and the 4-wood carry limit is enforced
 5. Building at a wrong bridge site is rejected
@@ -185,6 +185,8 @@ ELI5: before buying anything, the game checks the wallet for the highest possibl
 4. **Settle after.** When the call finishes, the actual cost replaces the reservation.
 5. **Assume the worst when unsure.** If a call times out or its cost is unknown, the full reserved amount counts as spent.
 6. **Resume never raises a cap.** Captain can resume a paused session only while it fits under every cap. Raising any cap needs its own FIAT.
+
+**Required budget tests (Mago's note N2):** before Gate 3, Teso verifies the chosen provider's real prices and how it charges. The cap tests must include duplicate requests, two spending attempts at the same moment, timeouts, and calls whose cost is unknown. The approved caps stay unchanged.
 
 When a hard stop is reached, AI calls stop and the game saves. Captain can still look at the map, the log and the council notes at no cost.
 
@@ -273,9 +275,11 @@ Whichever we pick needs an account with a small prepaid balance. Prepaid credit 
 
 | Who | Rev 1 | Rev 2 |
 |---|---|---|
-| Mago (architect) | Pass with conditions; construction hold (findings M1–M4, C1–C3) | Pending: confirm the findings are fixed |
-| Teso (treasury) | Support | Pending: confirm section 6 (now reserves before spending) |
+| Mago (architect) | Pass with conditions; construction hold (findings M1–M4, C1–C3) | **Pass with notes.** All 7 findings resolved; hold withdrawn. Notes N1–N2 added as verification requirements |
+| Teso (treasury) | Support | **Support.** Section 6 cleared |
 | Vero (examiner, drafter) | Drafted | Drafted |
 | **Captain Hiro** | | **Cards A–D, then construction FIAT** |
+
+Council approval covers the construction **design** only. It is not proof that any software works; that comes gate by gate (section 7).
 
 *One Game. One World. One O'Clan.*

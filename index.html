@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 8 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 9 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is ready:</strong> it fixes all of Mago's findings. Teso signed off on Revision 1.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council.</strong> Mago: pass with notes (hold withdrawn). Teso: support. Waiting only on Captain's decision cards and construction FIAT.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -109,9 +109,9 @@
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Vero drafted <a href="contract-001.html">Construction Contract 001</a></strong>, including a rough feasibility check (bridge done by day 2&ndash;3 of 7).</li>
   <li><span class="ord">Done</span><span class="tag mago">Mago</span><span class="tag teso">Teso</span><strong>Mago and Teso reviewed Revision 1.</strong> Mago: pass with conditions, construction hold. Teso: support.</li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Vero drafted <a href="contract-001.html">Revision 2</a></strong>, fixing Mago's findings M1&ndash;M4 and C1&ndash;C3.</li>
-  <li><span class="ord">1st</span><span class="tag mago">Mago</span><span class="tag teso">Teso</span><strong>Send Revision 2 to Mago and Teso.</strong><span class="why">Mago confirms his findings are fixed (see "What changed in Revision 2" at the top). Teso confirms section 6 (the budget is now reserved before every call). Text link: raw.githubusercontent.com/hirodep/war-council-724/main/CONTRACT-001.md</span></li>
-  <li><span class="ord">2nd</span><span class="tag cmd">Captain</span><strong>Answer decision cards A&ndash;D</strong> (contract section 8).<span class="why">All three council members now agree on every card: A1 with rules, B decided later, C1, D1.</span></li>
-  <li><span class="ord">3rd</span><span class="tag cmd">Captain</span><strong>Construction FIAT</strong>, once Mago and Teso confirm Revision 2.</li>
+  <li><span class="ord">Done</span><span class="tag mago">Mago</span><span class="tag teso">Teso</span><strong>Revision 2 approved.</strong> Mago: pass with notes, hold withdrawn. Teso: support, section 6 cleared.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Answer decision cards A&ndash;D</strong> (contract section 8).<span class="why">The council is unanimous: A1, B0 (decide later), C1, D1.</span></li>
+  <li><span class="ord">2nd</span><span class="tag cmd">Captain</span><strong>Construction FIAT.</strong><span class="why">This starts Gate 0. First steps: install Python and create the "oclan-game" repository, with Vero guiding.</span></li>
 </ol>
 </section>
 
@@ -502,6 +502,18 @@
 </details>
 
 <details>
+<summary>Contract 001, Rev 2 sign-offs <span class="meta">&middot; 2026-11-07 &middot; Mago: pass with notes &middot; Teso: support</span></summary>
+<p><span class="verdict">Mago: PASS WITH NOTES.</span> All seven findings resolved (M1, M3 and M4 at contract and design level; M2, C1&ndash;C3 resolved). Construction hold withdrawn. This approves the design, not implemented software. Two notes kept as verification requirements:</p>
+<ul>
+  <li><strong>N1, actual food deadline:</strong> Gate 0 must show every required starting condition is winnable before its real food deadline (day 3, 4 or 5); winning within 7 days is not enough.</li>
+  <li><strong>N2, financial enforcement:</strong> before Gate 3, Teso verifies real provider pricing and charging. Budget tests must include duplicate requests, simultaneous spending attempts, timeouts and uncertain charges. Caps unchanged.</li>
+</ul>
+<p><span class="verdict">Teso: SUPPORT (Revision 2 cleared).</span> Confirms reserve-before-spending (M3), the prepaid safeguard tied to Card B, and Teso's mandatory review of spending logs and cap tests before gate sign-off. Will audit light-model pricing and prepaid tiers while Gate 0 runs at no cost.</p>
+<p><strong>Cards, both members:</strong> A1 with Revision 2 rules; B0, decide before Gate 3; C1, private "oclan-game" repo; D1, reviewed after Gate 5.</p>
+<p class="meta">Vero: N1 and N2 are now written into the contract (Gate 0 item 2 and section 6).</p>
+</details>
+
+<details>
 <summary>Mago's review of Contract 001, Rev 1 <span class="meta">&middot; 2026-11-07 &middot; Pass with conditions, construction hold</span></summary>
 <p><span class="verdict">PASS WITH CONDITIONS &mdash; CONSTRUCTION HOLD.</span> Supports the direction: 8-week limit, Python and SQLite, plain-code Momo Core, local-first, tight scope. Four findings to fix first:</p>
 <table>
@@ -558,6 +570,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-07</td><td>Contract 001 Rev 2 approved by the council: Mago pass with notes (hold withdrawn; notes N1&ndash;N2 added), Teso support. Unanimous on cards A1, B0, C1, D1. Awaiting Captain</td><td>Council approved</td></tr>
     <tr><td>2026-11-07</td><td>Mago reviews Contract 001 Rev 1: pass with conditions, construction hold (findings M1&ndash;M4, C1&ndash;C3). Teso: treasury support. Vero issues Revision 2 addressing every finding; council now agrees on all four cards</td><td>PROPOSED</td></tr>
     <tr><td>2026-11-07</td><td>Vero drafts Construction Contract 001 ("The Broken Bridge"): scope, rules, gates, budget controller, roles, and decision cards A&ndash;D for Captain</td><td>PROPOSED</td></tr>
     <tr><td>2026-11-07</td><td>Teso accepts all four FIAT decisions and confirms the treasury caps ($0.25 and 30 decisions per session, $5 per month; warn at 80%, freeze at 100%). Council unanimous; Vero cleared to draft the construction contract and Gate 0 proof.</td><td>Accepted</td></tr>

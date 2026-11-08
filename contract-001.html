@@ -43,10 +43,10 @@
 <main>
 <p class="meta"><a href="./">&larr; O'Clan Headquarters</a> &middot; Text version for AI readers: <a href="https://raw.githubusercontent.com/hirodep/war-council-724/main/CONTRACT-001.md">CONTRACT-001.md</a></p>
 <h1>Construction Contract 001 — "The Broken Bridge"</h1>
-<p><strong>Status:</strong> REVISION 2 · DRAFT for council review · not yet FIAT approved
+<p><strong>Status:</strong> REVISION 2 · council approved (Mago: pass with notes; Teso: support) · awaiting Captain's construction FIAT
 <strong>Drafted by:</strong> Vero, record keeper · Rev 1 and Rev 2: 2026-11-07
 <strong>Covers:</strong> the first playable build of the O'Clan game (Proposal 001)
-<strong>Approval needed:</strong> Mago confirms Rev 2 fixes his findings → Captain answers 4 decision cards → Captain's construction FIAT</p>
+<strong>Approval needed:</strong> Captain answers 4 decision cards → Captain's construction FIAT</p>
 <blockquote>
 <p><strong>In one sentence:</strong> in 8 weeks (about 96 hours), build one small turn-based game where Captain and three AI teammates must share secrets to fix a broken bridge, with every move checked by Momo and every dollar capped.</p>
 </blockquote>
@@ -378,7 +378,7 @@
 <p>Gate 0 is a working program, not math on paper. It plays the game with scripted teams (no AI, no cost) and must show:</p>
 <ol>
 <li>At least one legal winning sequence of actions</li>
-<li>The win happens within 7 days</li>
+<li>The win happens <strong>before that game's actual food deadline</strong> (day 3, 4 or 5), not just within 7 days (Mago's note N1)</li>
 <li>No character ever takes more than 3 actions in a day</li>
 <li>Wood is counted correctly, and the 4-wood carry limit is enforced</li>
 <li>Building at a wrong bridge site is rejected</li>
@@ -458,6 +458,7 @@
 <li><strong>Assume the worst when unsure.</strong> If a call times out or its cost is unknown, the full reserved amount counts as spent.</li>
 <li><strong>Resume never raises a cap.</strong> Captain can resume a paused session only while it fits under every cap. Raising any cap needs its own FIAT.</li>
 </ol>
+<p><strong>Required budget tests (Mago's note N2):</strong> before Gate 3, Teso verifies the chosen provider's real prices and how it charges. The cap tests must include duplicate requests, two spending attempts at the same moment, timeouts, and calls whose cost is unknown. The approved caps stay unchanged.</p>
 <p>When a hard stop is reached, AI calls stop and the game saves. Captain can still look at the map, the log and the council notes at no cost.</p>
 <p>The real price per call is not known yet. Teso checks current prices before Gate 3. The controller and the prepaid balance (Card B) protect us either way.</p>
 <hr />
@@ -670,12 +671,12 @@
 <tr>
 <td>Mago (architect)</td>
 <td>Pass with conditions; construction hold (findings M1–M4, C1–C3)</td>
-<td>Pending: confirm the findings are fixed</td>
+<td><strong>Pass with notes.</strong> All 7 findings resolved; hold withdrawn. Notes N1–N2 added as verification requirements</td>
 </tr>
 <tr>
 <td>Teso (treasury)</td>
 <td>Support</td>
-<td>Pending: confirm section 6 (now reserves before spending)</td>
+<td><strong>Support.</strong> Section 6 cleared</td>
 </tr>
 <tr>
 <td>Vero (examiner, drafter)</td>
@@ -689,6 +690,7 @@
 </tr>
 </tbody>
 </table>
+<p>Council approval covers the construction <strong>design</strong> only. It is not proof that any software works; that comes gate by gate (section 7).</p>
 <p><em>One Game. One World. One O'Clan.</em></p>
 </main>
 </body>
