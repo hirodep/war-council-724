@@ -1,9 +1,9 @@
 # Construction Contract 001 — "The Broken Bridge"
 
-**Status:** REVISION 2 · council approved (Mago: pass with notes; Teso: support) · awaiting Captain's construction FIAT
+**Status:** REVISION 2 · **FIAT APPROVED 2026-11-07** · construction authorized; Gate 0 in progress
 **Drafted by:** Vero, record keeper · Rev 1 and Rev 2: 2026-11-07
 **Covers:** the first playable build of the O'Clan game (Proposal 001)
-**Approval needed:** Captain answers 4 decision cards → Captain's construction FIAT
+**Captain's decisions (2026-11-07):** Card A1 · Card B0 · Card C1 · Card D1 · construction FIAT issued
 
 > **In one sentence:** in 8 weeks (about 96 hours), build one small turn-based game where Captain and three AI teammates must share secrets to fix a broken bridge, with every move checked by Momo and every dollar capped.
 
@@ -278,7 +278,7 @@ Whichever we pick needs an account with a small prepaid balance. Prepaid credit 
 | Mago (architect) | Pass with conditions; construction hold (findings M1–M4, C1–C3) | **Pass with notes.** All 7 findings resolved; hold withdrawn. Notes N1–N2 added as verification requirements |
 | Teso (treasury) | Support | **Support.** Section 6 cleared |
 | Vero (examiner, drafter) | Drafted | Drafted |
-| **Captain Hiro** | | **Cards A–D, then construction FIAT** |
+| **Captain Hiro** | | **FIAT issued 2026-11-07:** Cards A1, B0, C1, D1 approved; construction authorized |
 
 Council approval covers the construction **design** only. It is not proof that any software works; that comes gate by gate (section 7).
 
