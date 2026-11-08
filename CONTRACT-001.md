@@ -52,11 +52,11 @@ Shaman dolls and villager growth · other NPCs · combat · economy and trading 
 
 A storm broke the river bridge. The village's food is running out, and the fields are on the far bank. Fix the bridge before the food runs out.
 
-| Rule | Draft value |
+| Rule | Value (tuned in Gate 0) |
 |---|---|
 | Map | 10×10. A river runs north to south; the only crossing is the broken bridge |
 | Start | Everyone starts in the village square |
-| Move | Up to 5 squares per action |
+| Move | Up to **6** squares per action (Gate 0 tuning; was 5) |
 | Look | See everything within 2 squares |
 | Gather | +2 wood per action, standing on a forest square |
 | Carry | Each character carries at most 4 wood |
@@ -70,9 +70,11 @@ A storm broke the river bridge. The village's food is running out, and the field
 
 | Secret | Why it matters |
 |---|---|
-| Where the forest is (one of 3 possible spots) | Others must search or be told |
+| Where the forest is (one of 3 possible spots: (1,1), (1,8) or (3,3) after Gate 0 tuning) | Others must search or be told |
 | Which of 3 riverbank spots is the real bridge site | Building at a wrong spot wastes the action |
 | On which day the food runs out (3, 4 or 5) | Decides whether the team can afford to explore or must rush |
+
+**Captain's FIAT F3 (2026-11-07): the food secret is story only.** Gate 0 proved that in a pure race, knowing the deadline never changes the team's plan. Captain chose to keep it as story and tension rather than add a rule. Gate 0 check 9 applies to the forest and bridge-site secrets only.
 
 **Why the food deadline changed (Mago's M1).** In Rev 1 the earliest deadline was day 4, but a good team finishes on day 2 or 3, so the food secret never mattered. With deadlines from day 3, a team that wastes day 1 can lose, so knowing the deadline changes what the team should do. Gate 0 will check this with real runs and adjust the numbers.
 
