@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Construction Contract 001</title>
+<meta name="description" content="Draft construction contract for The Broken Bridge, the first playable O'Clan game build.">
+<style>
+  :root { --bg:#f7f5f0; --ink:#1d1d1b; --muted:#5c5a55; --line:#d9d4c8; --accent:#1f6f6b; --soft:rgba(31,111,107,.07);
+          --todo-bg:#fff6dc; --todo-line:#c9971c; --vero:#1f6f6b; --mago:#7a3fb0; --teso:#2a63b8; --cmd:#9a7414; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#151514; --ink:#ecebe6; --muted:#a6a39b; --line:#34322e; --accent:#5fc1b9; --soft:rgba(95,193,185,.08);
+          --todo-bg:#2a2414; --todo-line:#d6a93a; --vero:#5fc1b9; --mago:#b98ae6; --teso:#7aa8f0; --cmd:#e2bd5a; } }
+  body { background:var(--bg); color:var(--ink); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; margin:0; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; padding-bottom:4px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:1rem; margin:20px 0 6px; }
+  .meta { color:var(--muted); font-size:.9rem; margin:0 0 16px; }
+  .note { border-left:4px solid var(--accent); padding:8px 12px; background:var(--soft); }
+  table { width:100%; border-collapse:collapse; font-size:.92rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  li { margin:4px 0; }
+  .todo { background:var(--todo-bg); border:2px solid var(--todo-line); border-radius:10px; padding:12px 16px 8px; margin:24px 0; }
+  .todo h2 { margin-top:4px; border-bottom-color:var(--todo-line); }
+  .todo ol { padding-left:0; list-style:none; margin:8px 0; }
+  .todo li { border-left:6px solid var(--cmd); padding:6px 10px; margin:10px 0; background:rgba(127,127,127,.06); border-radius:4px; }
+  .ord { display:inline-block; min-width:2.6em; font-weight:800; }
+  .why { color:var(--muted); font-size:.88rem; display:block; margin-top:2px; }
+  .tag { display:inline-block; font-size:.75rem; font-weight:700; color:#fff; padding:1px 7px; border-radius:9px; margin-right:4px; }
+  .tag.vero { background:var(--vero); } .tag.mago { background:var(--mago); } .tag.teso { background:var(--teso); } .tag.cmd { background:var(--cmd); }
+  @media (prefers-color-scheme: dark) { .tag { color:#151514; } }
+  details { border:1px solid var(--line); border-radius:8px; padding:8px 14px; margin:12px 0; }
+  details[open] { padding-bottom:14px; }
+  summary { cursor:pointer; font-weight:700; }
+  summary .meta { font-weight:400; margin:0; display:inline; }
+  .verdict { font-weight:800; color:var(--accent); }
+  a { color:var(--accent); }
+</style>
+<style> blockquote { border-left:4px solid var(--accent); margin:12px 0; padding:8px 12px; background:var(--soft); } hr { border:0; border-top:1px solid var(--line); margin:24px 0; } </style>
+</head>
+<body>
+<main>
+<p class="meta"><a href="./">&larr; O'Clan Headquarters</a> &middot; Text version for AI readers: <a href="https://raw.githubusercontent.com/hirodep/war-council-724/main/CONTRACT-001.md">CONTRACT-001.md</a></p>
+<h1>Construction Contract 001 — "The Broken Bridge"</h1>
+<p><strong>Status:</strong> DRAFT for council review · not yet FIAT approved
+<strong>Drafted by:</strong> Vero, record keeper · 2026-11-07
+<strong>Covers:</strong> the first playable build of the O'Clan game (Proposal 001)
+<strong>Approval needed:</strong> Mago and Teso review → Captain's 4 decision cards → Captain's construction FIAT</p>
+<blockquote>
+<p><strong>In one sentence:</strong> in 8 weeks (about 96 hours), build one small turn-based game where Captain and three AI teammates must share secrets to fix a broken bridge, with every move checked by Momo and every dollar capped.</p>
+</blockquote>
+<hr />
+<h2>1. What we are building</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>One playable session of "The Broken Bridge" that Captain can finish in about 15–20 minutes</td>
+</tr>
+<tr>
+<td><strong>Pass mark</strong></td>
+<td>Captain plays it and finds it fun to play with the O'Clan</td>
+</tr>
+<tr>
+<td><strong>Runs on</strong></td>
+<td>Captain's own computer. $0 hosting</td>
+</tr>
+<tr>
+<td><strong>Time box</strong></td>
+<td>8 weeks at about 12 hours a week (~96 hours). Review at week 8; the council may vote HOLD if no fun session exists</td>
+</tr>
+</tbody>
+</table>
+<h3>In scope (first build only)</h3>
+<ul>
+<li>A 10×10 village grid, turn-based, 7 in-world days, 3 actions per character per day</li>
+<li>4 characters: Captain (human), Mago, Vero, Teso (AI)</li>
+<li>6 actions: move, look, gather, give, build, say</li>
+<li>Momo Core: a plain-code referee that checks every action</li>
+<li>Save, recover and replay</li>
+<li>A simple map picture redrawn after each turn</li>
+<li>The budget controller (section 6)</li>
+</ul>
+<h3>Out of scope (needs a new FIAT to add)</h3>
+<p>Shaman dolls and villager growth · other NPCs · combat · economy and trading · more clans or villages · live animated graphics · voice · online multiplayer · public hosting.</p>
+<p><strong>Change rule:</strong> anything not on the in-scope list needs a decision card and Captain's FIAT before anyone builds it.</p>
+<hr />
+<h2>2. The scenario (draft rules, tuned in Gate 0)</h2>
+<p>A storm broke the river bridge. The village's food is running out, and the fields are on the far bank. Fix the bridge before the food runs out.</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Draft value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Map</td>
+<td>10×10. A river runs north to south; the only crossing is the broken bridge</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Everyone starts in the village square</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Up to 5 squares per action</td>
+</tr>
+<tr>
+<td>Look</td>
+<td>See everything within 2 squares</td>
+</tr>
+<tr>
+<td>Gather</td>
+<td>+2 wood per action, standing on a forest square</td>
+</tr>
+<tr>
+<td>Carry</td>
+<td>Each character carries at most 4 wood</td>
+</tr>
+<tr>
+<td>Give</td>
+<td>Hand wood to a character on the same square</td>
+</tr>
+<tr>
+<td>Build</td>
+<td>Put your wood into the bridge, standing at the correct bridge site</td>
+</tr>
+<tr>
+<td>Say</td>
+<td>Send one message to the team (costs an action; see Card D)</td>
+</tr>
+<tr>
+<td>Win</td>
+<td>12 wood built into the correct bridge site before the food runs out</td>
+</tr>
+<tr>
+<td>Lose</td>
+<td>Food runs out first (a hidden day, 4 to 6)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The secrets (what makes teamwork matter).</strong> Each AI character knows one thing the others don't. They change every game.</p>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where the forest is</td>
+<td>Others must search or be told</td>
+</tr>
+<tr>
+<td>Which of 3 riverbank spots is the real bridge site</td>
+<td>Building at a wrong spot wastes the action</td>
+</tr>
+<tr>
+<td>How many days of food are left</td>
+<td>Tells the team how fast to go</td>
+</tr>
+</tbody>
+</table>
+<p>Captain knows nothing special at the start, like a captain arriving at a new village.</p>
+<p><strong>Rough feasibility check (done 2026-11-07).</strong> A quick test of these draft numbers, not the real game engine:</p>
+<table>
+<thead>
+<tr>
+<th>Team behavior</th>
+<th>Bridge finished</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everyone already knows the secrets</td>
+<td>Day 2</td>
+</tr>
+<tr>
+<td>Everyone spends day 1 sharing secrets</td>
+<td>Day 3</td>
+</tr>
+</tbody>
+</table>
+<p>So the game looks winnable with room for mistakes. Gate 0 must prove it again with the real rules, and tune the numbers so it is neither too easy nor impossible.</p>
+<hr />
+<h2>3. How a day works</h2>
+<ol>
+<li><strong>Morning:</strong> each AI character gets a short report of what it can see and remember, and returns its plan for the day (see Card A).</li>
+<li><strong>Day:</strong> everyone's actions run in a fixed order. Momo checks each one. Rejected actions still use up the action, with a clear reason.</li>
+<li><strong>Evening council:</strong> Captain may ask the team a question and issue FIAT on the next day's goal. FIAT sets goals; it never lets anyone break a rule.</li>
+<li><strong>Save:</strong> the day is saved. The map picture redraws.</li>
+</ol>
+<hr />
+<h2>4. Truth and memory (from Proposal 001, all accepted)</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Owner</th>
+<th>Can it be wrong?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World state</td>
+<td>Game engine</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Event log (every accepted action, numbered)</td>
+<td>Game engine</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Each character's memory</td>
+<td>That character</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Anything a character says</td>
+<td>Nobody</td>
+<td>Yes, it's just talk</td>
+</tr>
+</tbody>
+</table>
+<p>Talk never changes the world. Only actions that Momo accepts do.</p>
+<hr />
+<h2>5. Gates (build order)</h2>
+<p>Each gate must pass before the next starts. Hours are rough estimates out of 96.</p>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Goal</th>
+<th>Done when</th>
+<th>Est. hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Winnable rules</td>
+<td>A scripted team wins within 7 days × 3 actions; illegal actions are rejected; the same recorded actions always give the same result</td>
+<td>10</td>
+</tr>
+<tr>
+<td>1</td>
+<td>World engine</td>
+<td>The full rule set runs, with Momo checking every action</td>
+<td>16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Save and replay</td>
+<td>Stopping mid-game and restarting loses nothing; replays match exactly</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AI teammates</td>
+<td>The three AI characters play through the action menu only, within the budget</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Real cooperation</td>
+<td>Passes the 5 cooperation tests (below)</td>
+<td>14</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Captain plays</td>
+<td>Captain plays full sessions and judges whether it's fun</td>
+<td>10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Map picture polish</td>
+<td>Only if time remains; a live viewer is not part of this contract</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>Buffer</td>
+<td>Fixes and surprises</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cooperation tests (Gate 4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Passes if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hidden information (secrets reshuffled each game)</td>
+<td>The team still wins most games</td>
+</tr>
+<tr>
+<td>Silence (the "say" action switched off, same starting map and secrets)</td>
+<td>Win rate drops clearly; if not, the talking was decoration</td>
+</tr>
+<tr>
+<td>Fabrication (ask a character about something that never happened)</td>
+<td>It answers "no record"</td>
+</tr>
+<tr>
+<td>Crash (stop mid-game, restart)</td>
+<td>Everyone resumes from the saved state</td>
+</tr>
+<tr>
+<td>Replay (same recorded actions)</td>
+<td>Same outcome, every time</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Budget controller (FIAT approved; enforced in code)</h2>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Warning (80%)</th>
+<th>Hard stop (100%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dollars per session</td>
+<td>$0.20</td>
+<td>$0.25</td>
+</tr>
+<tr>
+<td>AI decisions per session</td>
+<td>24</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Dollars per month</td>
+<td>$4.00</td>
+<td>$5.00</td>
+</tr>
+</tbody>
+</table>
+<p>When a hard stop is reached:</p>
+<ol>
+<li>AI calls stop. Nothing is lost; the game saves.</li>
+<li>Captain can still look at the map, the log and the council notes for free.</li>
+<li>Captain may resume a paused session only while under the monthly cap.</li>
+<li>Raising any cap needs its own FIAT. "Resume" never raises a cap.</li>
+<li>Retries count against the budget. At most 1 retry per failed decision.</li>
+</ol>
+<p>The dollar cost of each call is not verified yet. Teso checks real prices before Gate 3; the code caps protect us either way.</p>
+<hr />
+<h2>7. Who does what</h2>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Role in construction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Captain Hiro</strong></td>
+<td>Decides by FIAT, runs the game on his computer, plays and judges fun. Does not need to read code</td>
+</tr>
+<tr>
+<td><strong>Vero</strong></td>
+<td>Writes the code with Captain in session, keeps the board, explains every decision in plain words</td>
+</tr>
+<tr>
+<td><strong>Mago</strong></td>
+<td>Reviews the design and each gate's results; architect's sign-off on gates 1–3</td>
+</tr>
+<tr>
+<td><strong>Teso</strong></td>
+<td>Checks prices, watches the budget, signs off on the budget controller</td>
+</tr>
+<tr>
+<td><strong>Momo</strong></td>
+<td>Not a member: the referee code inside the game</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plain-language rule:</strong> anything that reaches Captain comes as a decision card: the choice, the options, the risk of each, and a recommendation.</p>
+<hr />
+<h2>8. Decision cards for Captain (needed before construction FIAT)</h2>
+<h3>Card A — How the AI teammates use their 30 decisions</h3>
+<p>AI characters take up to 63 actions a game (3 characters × 7 days × 3), but the budget allows 30 AI decisions.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>How it works</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A1. One plan per day (Vero's pick)</strong></td>
+<td>Each morning, each AI picks its 3 actions in one go: 3 × 7 = 21 decisions, leaving 9 for council and retries</td>
+<td>Plans can go stale mid-day; if an action fails, the rest of that day's plan is cancelled</td>
+</tr>
+<tr>
+<td>A2. One decision per action</td>
+<td>The AI rethinks before every move</td>
+<td>Needs up to 63 decisions; breaks the 30 cap by about day 3</td>
+</tr>
+</tbody>
+</table>
+<h3>Card B — Which AI service powers the in-game characters</h3>
+<p>Proposal 001 says one service at first, with three separate character sheets.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude (Anthropic)</td>
+<td>Same family as Vero</td>
+</tr>
+<tr>
+<td>ChatGPT (OpenAI)</td>
+<td>Same family as Mago</td>
+</tr>
+<tr>
+<td>Gemini (Google)</td>
+<td>Same family as Teso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vero's recommendation:</strong> let Teso compare current prices for a small, cheap model from each, then run a quick test: can Captain tell the three characters apart? Pick the cheapest one that passes. Note: whichever we pick needs an account with prepaid credit. Prepaid credit is itself a safety net, because it can't overspend.</p>
+<h3>Card C — Where the code lives</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C1. A new private GitHub repository, "oclan-game" (Vero's pick)</strong></td>
+<td>Every change is saved and can be undone; the council board can link to progress</td>
+</tr>
+<tr>
+<td>C2. A folder on Captain's computer only</td>
+<td>Simpler, but no history, and harder to recover if something breaks</td>
+</tr>
+</tbody>
+</table>
+<h3>Card D — Does "say" cost an action?</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1. Yes, it costs 1 of the 3 daily actions (Vero's pick)</strong></td>
+<td>Sharing a secret is a real choice, which is the heart of the game; makes the silence test meaningful</td>
+</tr>
+<tr>
+<td>D2. No, talking is free</td>
+<td>Easier, but the team can share everything at no cost, so secrets matter less</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>9. What Captain needs ready (before Gate 3)</h2>
+<ol>
+<li>Python installed on Captain's computer (Vero will guide this step by step).</li>
+<li>An AI account with a small prepaid balance, once Card B is decided.</li>
+<li>About 12 hours a week, as committed.</li>
+</ol>
+<hr />
+<h2>10. Sign-off</h2>
+<table>
+<thead>
+<tr>
+<th>Who</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mago (architect)</td>
+<td>Pending review</td>
+</tr>
+<tr>
+<td>Teso (treasury)</td>
+<td>Pending review</td>
+</tr>
+<tr>
+<td>Vero (examiner, drafter)</td>
+<td>Drafted</td>
+</tr>
+<tr>
+<td><strong>Captain Hiro</strong></td>
+<td><strong>Construction FIAT pending</strong>, after Cards A–D</td>
+</tr>
+</tbody>
+</table>
+<p><em>One Game. One World. One O'Clan.</em></p>
+</main>
+</body>
+</html>
