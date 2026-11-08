@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Construction Contract 001</title>
-<meta name="description" content="Draft construction contract for The Broken Bridge, the first playable O'Clan game build.">
+<meta name="description" content="Construction contract (Revision 2, draft) for The Broken Bridge, the first playable O'Clan game build.">
 <style>
   :root { --bg:#f7f5f0; --ink:#1d1d1b; --muted:#5c5a55; --line:#d9d4c8; --accent:#1f6f6b; --soft:rgba(31,111,107,.07);
           --todo-bg:#fff6dc; --todo-line:#c9971c; --vero:#1f6f6b; --mago:#7a3fb0; --teso:#2a63b8; --cmd:#9a7414; }
@@ -43,13 +43,52 @@
 <main>
 <p class="meta"><a href="./">&larr; O'Clan Headquarters</a> &middot; Text version for AI readers: <a href="https://raw.githubusercontent.com/hirodep/war-council-724/main/CONTRACT-001.md">CONTRACT-001.md</a></p>
 <h1>Construction Contract 001 — "The Broken Bridge"</h1>
-<p><strong>Status:</strong> DRAFT for council review · not yet FIAT approved
-<strong>Drafted by:</strong> Vero, record keeper · 2026-11-07
+<p><strong>Status:</strong> REVISION 2 · DRAFT for council review · not yet FIAT approved
+<strong>Drafted by:</strong> Vero, record keeper · Rev 1 and Rev 2: 2026-11-07
 <strong>Covers:</strong> the first playable build of the O'Clan game (Proposal 001)
-<strong>Approval needed:</strong> Mago and Teso review → Captain's 4 decision cards → Captain's construction FIAT</p>
+<strong>Approval needed:</strong> Mago confirms Rev 2 fixes his findings → Captain answers 4 decision cards → Captain's construction FIAT</p>
 <blockquote>
 <p><strong>In one sentence:</strong> in 8 weeks (about 96 hours), build one small turn-based game where Captain and three AI teammates must share secrets to fix a broken bridge, with every move checked by Momo and every dollar capped.</p>
 </blockquote>
+<h3>What changed in Revision 2</h3>
+<table>
+<thead>
+<tr>
+<th>Finding (from Mago's review)</th>
+<th>Fixed in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1: the food secret may not matter</td>
+<td>Section 2 (tighter food deadline) and section 5 (Gate 0 must prove each secret matters)</td>
+</tr>
+<tr>
+<td>M2: how the daily AI plan works</td>
+<td>Section 3 (new "daily plan rules")</td>
+</tr>
+<tr>
+<td>M3: caps must be checked before spending, not after</td>
+<td>Section 6 (reserve before every call)</td>
+</tr>
+<tr>
+<td>M4: Gate 0 needs executable proof</td>
+<td>Section 5 (Gate 0 checklist)</td>
+</tr>
+<tr>
+<td>C1: rejected actions in the log</td>
+<td>Section 4</td>
+</tr>
+<tr>
+<td>C2: the map picture is mandatory</td>
+<td>Sections 1 and 5</td>
+</tr>
+<tr>
+<td>C3: Vero can't verify her own work</td>
+<td>Section 7 (independent checks)</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2>1. What we are building</h2>
 <table>
@@ -85,7 +124,7 @@
 <li>6 actions: move, look, gather, give, build, say</li>
 <li>Momo Core: a plain-code referee that checks every action</li>
 <li>Save, recover and replay</li>
-<li>A simple map picture redrawn after each turn</li>
+<li><strong>A simple map picture redrawn after each turn (mandatory by FIAT)</strong></li>
 <li>The budget controller (section 6)</li>
 </ul>
 <h3>Out of scope (needs a new FIAT to add)</h3>
@@ -144,11 +183,11 @@
 </tr>
 <tr>
 <td>Lose</td>
-<td>Food runs out first (a hidden day, 4 to 6)</td>
+<td>Food runs out first. <strong>Rev 2: a hidden day from 3 to 5</strong> (was 4 to 6)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>The secrets (what makes teamwork matter).</strong> Each AI character knows one thing the others don't. They change every game.</p>
+<p><strong>The secrets.</strong> Each AI character knows one thing the others don't. They change every game.</p>
 <table>
 <thead>
 <tr>
@@ -158,7 +197,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Where the forest is</td>
+<td>Where the forest is (one of 3 possible spots)</td>
 <td>Others must search or be told</td>
 </tr>
 <tr>
@@ -166,13 +205,13 @@
 <td>Building at a wrong spot wastes the action</td>
 </tr>
 <tr>
-<td>How many days of food are left</td>
-<td>Tells the team how fast to go</td>
+<td>On which day the food runs out (3, 4 or 5)</td>
+<td>Decides whether the team can afford to explore or must rush</td>
 </tr>
 </tbody>
 </table>
-<p>Captain knows nothing special at the start, like a captain arriving at a new village.</p>
-<p><strong>Rough feasibility check (done 2026-11-07).</strong> A quick test of these draft numbers, not the real game engine:</p>
+<p><strong>Why the food deadline changed (Mago's M1).</strong> In Rev 1 the earliest deadline was day 4, but a good team finishes on day 2 or 3, so the food secret never mattered. With deadlines from day 3, a team that wastes day 1 can lose, so knowing the deadline changes what the team should do. Gate 0 will check this with real runs and adjust the numbers.</p>
+<p><strong>Rough feasibility check (done 2026-11-07).</strong> A quick test of the draft numbers, not the real game engine:</p>
 <table>
 <thead>
 <tr>
@@ -191,17 +230,50 @@
 </tr>
 </tbody>
 </table>
-<p>So the game looks winnable with room for mistakes. Gate 0 must prove it again with the real rules, and tune the numbers so it is neither too easy nor impossible.</p>
+<p>This is only a starting point. Gate 0 provides the real, executable proof.</p>
 <hr />
 <h2>3. How a day works</h2>
 <ol>
-<li><strong>Morning:</strong> each AI character gets a short report of what it can see and remember, and returns its plan for the day (see Card A).</li>
-<li><strong>Day:</strong> everyone's actions run in a fixed order. Momo checks each one. Rejected actions still use up the action, with a clear reason.</li>
-<li><strong>Evening council:</strong> Captain may ask the team a question and issue FIAT on the next day's goal. FIAT sets goals; it never lets anyone break a rule.</li>
-<li><strong>Save:</strong> the day is saved. The map picture redraws.</li>
+<li><strong>Morning report:</strong> every character, including Captain, gets a short report: what it can see, its memory, and any messages delivered overnight.</li>
+<li><strong>Morning plans:</strong> each AI character returns its plan for the day: 3 actions, in one decision. Captain also chooses 3 actions.</li>
+<li><strong>Day:</strong> actions run in a fixed order. Momo checks each one.</li>
+<li><strong>Evening:</strong> results, messages and the map picture are shown. Captain may hold a council and issue FIAT on the next day's goal. FIAT sets goals; it never lets anyone break a rule.</li>
+<li><strong>Save.</strong></li>
 </ol>
+<h3>Daily plan rules (Rev 2, answers Mago's M2)</h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do AI characters plan at the same time or one after another?</td>
+<td><strong>At the same time</strong>, from the same morning report. Nobody sees another's plan in advance. This keeps each character's thinking independent</td>
+</tr>
+<tr>
+<td>When does new information arrive?</td>
+<td>Things a character sees with "look" are added to <strong>its own</strong> memory right away, but plans don't change mid-day. Messages from "say" are delivered to everyone at the <strong>next morning report</strong></td>
+</tr>
+<tr>
+<td>What if one action fails?</td>
+<td>Momo rejects that action, and it still uses up its slot. <strong>The rest of the plan continues</strong>, with each action checked separately</td>
+</tr>
+<tr>
+<td>What uses the spare decisions?</td>
+<td>The budget is 30 per session: <strong>21</strong> for morning plans (3 characters × 7 days), up to <strong>6</strong> for council answers (each answer from one member = 1 decision), and <strong>3</strong> reserved for retries</td>
+</tr>
+<tr>
+<td>What happens at 30 decisions?</td>
+<td>The AI teammates stop. Each one "rests" (does nothing) for the rest of the game. The game saves. Captain may keep playing alone or end the session. Going past 30 needs its own FIAT</td>
+</tr>
+</tbody>
+</table>
+<p>Every action is still checked individually by Momo, whoever planned it.</p>
 <hr />
-<h2>4. Truth and memory (from Proposal 001, all accepted)</h2>
+<h2>4. Truth and memory</h2>
 <table>
 <thead>
 <tr>
@@ -220,6 +292,11 @@
 <td>Event log (every accepted action, numbered)</td>
 <td>Game engine</td>
 <td>No</td>
+</tr>
+<tr>
+<td>Rejected attempts (Rev 2)</td>
+<td>Game engine</td>
+<td>No. Kept in the log with their reason, but clearly marked as "rejected," separate from accepted events</td>
 </tr>
 <tr>
 <td>Each character's memory</td>
@@ -249,15 +326,15 @@
 <tbody>
 <tr>
 <td>0</td>
-<td>Winnable rules</td>
-<td>A scripted team wins within 7 days × 3 actions; illegal actions are rejected; the same recorded actions always give the same result</td>
-<td>10</td>
+<td>Winnable, fair rules</td>
+<td>The Gate 0 checklist below passes</td>
+<td>12</td>
 </tr>
 <tr>
 <td>1</td>
 <td>World engine</td>
 <td>The full rule set runs, with Momo checking every action</td>
-<td>16</td>
+<td>15</td>
 </tr>
 <tr>
 <td>2</td>
@@ -286,8 +363,8 @@
 <tr>
 <td>6</td>
 <td>Map picture polish</td>
-<td>Only if time remains; a live viewer is not part of this contract</td>
-<td>6</td>
+<td>The basic map picture is built earlier and is mandatory. Gate 6 is only optional polish, if time remains</td>
+<td>5</td>
 </tr>
 <tr>
 <td></td>
@@ -297,7 +374,22 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cooperation tests (Gate 4):</strong></p>
+<h3>Gate 0 checklist (Rev 2, answers Mago's M1 and M4)</h3>
+<p>Gate 0 is a working program, not math on paper. It plays the game with scripted teams (no AI, no cost) and must show:</p>
+<ol>
+<li>At least one legal winning sequence of actions</li>
+<li>The win happens within 7 days</li>
+<li>No character ever takes more than 3 actions in a day</li>
+<li>Wood is counted correctly, and the 4-wood carry limit is enforced</li>
+<li>Building at a wrong bridge site is rejected</li>
+<li>The food deadline ends the game on the right day</li>
+<li>The same recorded actions always give the same result</li>
+<li><strong>Many starting conditions</strong> (different forest spots, bridge sites, food days and secret holders) are all winnable by a team that shares information</li>
+<li><strong>Each secret matters:</strong> for each secret, there are starting conditions where knowing it changes the team's best plan</li>
+<li><strong>Communication matters:</strong> scripted teams that never share win clearly less often than teams that do</li>
+</ol>
+<p>If 9 or 10 fail, the numbers (map, deadlines, distances) are adjusted until they pass. Proposed starting target: sharing teams win 100% of test starts; silent teams win under 60%. These targets are proposals and can be tuned.</p>
+<h3>Cooperation tests (Gate 4, with real AI)</h3>
 <table>
 <thead>
 <tr>
@@ -356,15 +448,18 @@
 </tr>
 </tbody>
 </table>
-<p>When a hard stop is reached:</p>
+<h3>How spending is guarded (Rev 2, answers Mago's M3)</h3>
+<p>ELI5: before buying anything, the game checks the wallet for the highest possible price, not the expected one.</p>
 <ol>
-<li>AI calls stop. Nothing is lost; the game saves.</li>
-<li>Captain can still look at the map, the log and the council notes for free.</li>
-<li>Captain may resume a paused session only while under the monthly cap.</li>
-<li>Raising any cap needs its own FIAT. "Resume" never raises a cap.</li>
-<li>Retries count against the budget. At most 1 retry per failed decision.</li>
+<li><strong>Check first.</strong> Before every paid AI call, the controller checks the remaining session and monthly budgets.</li>
+<li><strong>Reserve the worst case.</strong> Every call has a fixed maximum length, so its highest possible cost is known in advance. The controller sets aside that maximum.</li>
+<li><strong>Refuse if it doesn't fit.</strong> If the worst case doesn't fit in what's left, the call is not made.</li>
+<li><strong>Settle after.</strong> When the call finishes, the actual cost replaces the reservation.</li>
+<li><strong>Assume the worst when unsure.</strong> If a call times out or its cost is unknown, the full reserved amount counts as spent.</li>
+<li><strong>Resume never raises a cap.</strong> Captain can resume a paused session only while it fits under every cap. Raising any cap needs its own FIAT.</li>
 </ol>
-<p>The dollar cost of each call is not verified yet. Teso checks real prices before Gate 3; the code caps protect us either way.</p>
+<p>When a hard stop is reached, AI calls stop and the game saves. Captain can still look at the map, the log and the council notes at no cost.</p>
+<p>The real price per call is not known yet. Teso checks current prices before Gate 3. The controller and the prepaid balance (Card B) protect us either way.</p>
 <hr />
 <h2>7. Who does what</h2>
 <table>
@@ -385,11 +480,11 @@
 </tr>
 <tr>
 <td><strong>Mago</strong></td>
-<td>Reviews the design and each gate's results; architect's sign-off on gates 1–3</td>
+<td>Architect: reviews the design and each gate's evidence</td>
 </tr>
 <tr>
 <td><strong>Teso</strong></td>
-<td>Checks prices, watches the budget, signs off on the budget controller</td>
+<td>Treasury: checks prices and independently examines the budget controller</td>
 </tr>
 <tr>
 <td><strong>Momo</strong></td>
@@ -397,11 +492,59 @@
 </tr>
 </tbody>
 </table>
+<h3>Independent checks (Rev 2, answers Mago's C3)</h3>
+<p>Vero builds the game, so Vero's own tests do not count as independent proof. A gate is marked <strong>IMPLEMENTED / VERIFIED</strong> only when:</p>
+<ol>
+<li><strong>Captain runs the tests on his own computer</strong> and sees them pass (Vero walks him through it);</li>
+<li><strong>Mago reviews the gate evidence:</strong> the test report, the replay check results and the event log sample; and</li>
+<li>for the budget controller, <strong>Teso reviews the spending log and the cap tests.</strong></li>
+</ol>
+<p>Mago and Teso work in other AI services and can't run the code themselves, so Vero produces a plain evidence report for each gate that Captain can pass to them.</p>
 <p><strong>Plain-language rule:</strong> anything that reaches Captain comes as a decision card: the choice, the options, the risk of each, and a recommendation.</p>
 <hr />
 <h2>8. Decision cards for Captain (needed before construction FIAT)</h2>
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>Question</th>
+<th>Mago</th>
+<th>Teso</th>
+<th>Vero</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>How AI teammates use their 30 decisions</td>
+<td>A1, with the rules in section 3</td>
+<td>A1</td>
+<td><strong>A1, with the section 3 rules</strong></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Which AI service runs the in-game characters</td>
+<td>Defer until Teso checks prices</td>
+<td>Teso compares prices</td>
+<td><strong>Defer: Teso compares; decide before Gate 3</strong></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Where the code lives</td>
+<td>C1, private repo "oclan-game", separate from SoyEssere</td>
+<td>C1</td>
+<td><strong>C1</strong></td>
+</tr>
+<tr>
+<td>D</td>
+<td>Does "say" cost an action?</td>
+<td>D1, review it in real play</td>
+<td>D1</td>
+<td><strong>D1, reviewed after Gate 5</strong></td>
+</tr>
+</tbody>
+</table>
 <h3>Card A — How the AI teammates use their 30 decisions</h3>
-<p>AI characters take up to 63 actions a game (3 characters × 7 days × 3), but the budget allows 30 AI decisions.</p>
 <table>
 <thead>
 <tr>
@@ -412,9 +555,9 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>A1. One plan per day (Vero's pick)</strong></td>
-<td>Each morning, each AI picks its 3 actions in one go: 3 × 7 = 21 decisions, leaving 9 for council and retries</td>
-<td>Plans can go stale mid-day; if an action fails, the rest of that day's plan is cancelled</td>
+<td><strong>A1. One plan per day, with the section 3 rules (all three recommend)</strong></td>
+<td>Each morning, each AI picks its 3 actions in one go: 21 decisions, plus 6 for council answers and 3 for retries</td>
+<td>Plans can go stale mid-day</td>
 </tr>
 <tr>
 <td>A2. One decision per action</td>
@@ -424,7 +567,6 @@
 </tbody>
 </table>
 <h3>Card B — Which AI service powers the in-game characters</h3>
-<p>Proposal 001 says one service at first, with three separate character sheets.</p>
 <table>
 <thead>
 <tr>
@@ -433,6 +575,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>B0. Decide later (all three recommend)</strong></td>
+<td>Teso compares current prices, speed and character consistency for a small model from each service; Captain picks before Gate 3. Nothing before Gate 3 needs an AI service</td>
+</tr>
 <tr>
 <td>Claude (Anthropic)</td>
 <td>Same family as Vero</td>
@@ -447,7 +593,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Vero's recommendation:</strong> let Teso compare current prices for a small, cheap model from each, then run a quick test: can Captain tell the three characters apart? Pick the cheapest one that passes. Note: whichever we pick needs an account with prepaid credit. Prepaid credit is itself a safety net, because it can't overspend.</p>
+<p>Whichever we pick needs an account with a small prepaid balance. Prepaid credit is a second safety net: it can't overspend.</p>
 <h3>Card C — Where the code lives</h3>
 <table>
 <thead>
@@ -458,8 +604,8 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>C1. A new private GitHub repository, "oclan-game" (Vero's pick)</strong></td>
-<td>Every change is saved and can be undone; the council board can link to progress</td>
+<td><strong>C1. A new private GitHub repository, "oclan-game" (all three recommend)</strong></td>
+<td>Every change is saved and can be undone; kept separate from SoyEssere</td>
 </tr>
 <tr>
 <td>C2. A folder on Captain's computer only</td>
@@ -477,8 +623,8 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>D1. Yes, it costs 1 of the 3 daily actions (Vero's pick)</strong></td>
-<td>Sharing a secret is a real choice, which is the heart of the game; makes the silence test meaningful</td>
+<td><strong>D1. Yes, it costs 1 of the 3 daily actions (all three recommend)</strong></td>
+<td>Sharing a secret is a real choice, which is the heart of the game. Reviewed after Captain's play sessions (Gate 5): if it makes characters too quiet to be fun, the council proposes a change</td>
 </tr>
 <tr>
 <td>D2. No, talking is free</td>
@@ -487,37 +633,59 @@
 </tbody>
 </table>
 <hr />
-<h2>9. What Captain needs ready (before Gate 3)</h2>
-<ol>
-<li>Python installed on Captain's computer (Vero will guide this step by step).</li>
-<li>An AI account with a small prepaid balance, once Card B is decided.</li>
-<li>About 12 hours a week, as committed.</li>
-</ol>
+<h2>9. What Captain needs ready</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before Gate 0</td>
+<td>Python installed on Captain's computer (Vero guides it step by step); the "oclan-game" repository created (Card C)</td>
+</tr>
+<tr>
+<td>Before Gate 3</td>
+<td>Card B decided; an AI account with a small prepaid balance</td>
+</tr>
+<tr>
+<td>Throughout</td>
+<td>About 12 hours a week, as committed</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2>10. Sign-off</h2>
 <table>
 <thead>
 <tr>
 <th>Who</th>
-<th>Status</th>
+<th>Rev 1</th>
+<th>Rev 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Mago (architect)</td>
-<td>Pending review</td>
+<td>Pass with conditions; construction hold (findings M1–M4, C1–C3)</td>
+<td>Pending: confirm the findings are fixed</td>
 </tr>
 <tr>
 <td>Teso (treasury)</td>
-<td>Pending review</td>
+<td>Support</td>
+<td>Pending: confirm section 6 (now reserves before spending)</td>
 </tr>
 <tr>
 <td>Vero (examiner, drafter)</td>
 <td>Drafted</td>
+<td>Drafted</td>
 </tr>
 <tr>
 <td><strong>Captain Hiro</strong></td>
-<td><strong>Construction FIAT pending</strong>, after Cards A–D</td>
+<td></td>
+<td><strong>Cards A–D, then construction FIAT</strong></td>
 </tr>
 </tbody>
 </table>
