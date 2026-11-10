@@ -56,21 +56,21 @@ A storm broke the river bridge. The village's food is running out, and the field
 |---|---|
 | Map | 10×10. A river runs north to south; the only crossing is the broken bridge |
 | Start | Everyone starts in the village square |
-| Move | Up to **6** squares per action (Gate 0 tuning; was 5) |
+| Move | Up to **6** squares per action (Gate 0 tuning; was 5; **awaiting Captain's ratification**, Mago G0-N3) |
 | Look | See everything within 2 squares |
 | Gather | +2 wood per action, standing on a forest square |
 | Carry | Each character carries at most 4 wood |
 | Give | Hand wood to a character on the same square |
 | Build | Put your wood into the bridge, standing at the correct bridge site |
 | Say | Send one message to the team (costs an action; see Card D) |
-| Win | 12 wood built into the correct bridge site before the food runs out |
+| Win | 12 wood built into the correct bridge site before the food runs out. **Finishing during the food day itself counts** (Mago G0-N1): the food check happens only at the end of that day, after every action |
 | Lose | Food runs out first. **Rev 2: a hidden day from 3 to 5** (was 4 to 6) |
 
 **The secrets.** Each AI character knows one thing the others don't. They change every game.
 
 | Secret | Why it matters |
 |---|---|
-| Where the forest is (one of 3 possible spots: (1,1), (1,8) or (3,3) after Gate 0 tuning) | Others must search or be told |
+| Where the forest is (one of 3 possible spots: (1,1), (1,8) or (3,3) after Gate 0 tuning; was (0,0), (0,9), (3,2); **awaiting Captain's ratification**) | Others must search or be told |
 | Which of 3 riverbank spots is the real bridge site | Building at a wrong spot wastes the action |
 | On which day the food runs out (3, 4 or 5) | Decides whether the team can afford to explore or must rush |
 

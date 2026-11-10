@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 13 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 14 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun: <strong>Gate 0: 10 of 10 checks pass, confirmed independently on Captain's own computer (2026-11-09).</strong> Food secret kept as story only by Captain's FIAT F3. Next: Mago reviews the Gate 0 report.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun: <strong>Gate 0: 10 of 10 checks pass, confirmed independently on Captain's own computer (2026-11-09).</strong> Food secret kept as story only by Captain's FIAT F3. <strong>Mago: pass with notes, source verification pending.</strong> Remaining: Captain ratifies the Gate 0 map tuning, and Mago checks the source package.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -116,7 +116,9 @@
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built Gate 0:</strong> rules, Momo referee, map picture, scripted teams, 10-item checklist. Result: 9 of 10 pass.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>FIAT F3: the food secret stays as story only.</strong> Checklist now 10 of 10.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 0 checklist on his own computer: 10 of 10 pass</strong>, matching Vero's run.</li>
-  <li><span class="ord">1st</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 0 report for review.</strong><span class="why">Attach the file gate0\REPORT.md from your oclan-game-main folder. The repository is private, so Mago can't open a link to it.</span></li>
+  <li><span class="ord">Done</span><span class="tag mago">Mago</span><strong>Mago reviewed the Gate 0 report:</strong> pass with notes G0-N1 to G0-N4.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Ratify the Gate 0 map tuning</strong> (move range 5 to 6; forest spots moved closer).<span class="why">Mago's G0-N3: a rule change needs an approval record.</span></li>
+  <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the source package</strong> (GATE0-SOURCE-PACKAGE.md from Vero).<span class="why">Mago's G0-N4: lets him read the actual code, not just its report. Then Gate 0 can be marked IMPLEMENTED / VERIFIED.</span></li>
 </ol>
 </section>
 
@@ -575,6 +577,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-09</td><td>Mago reviews the Gate 0 report: pass with notes, source verification pending. G0-N1 (finishing on the food day counts) written into the contract; G0-N2 (food is story only) already recorded by FIAT F3; G0-N3 (move 6, forest spots) sent to Captain for ratification; G0-N4 source package prepared at commit 5a48459</td><td>Pass with notes</td></tr>
     <tr><td>2026-11-09</td><td>Captain runs the Gate 0 checklist on his own computer (Windows, Python 3.14.3): 10 of 10 checks pass, identical to Vero's run. Independent check 1 of 2 for Gate 0 complete; Mago's review pending</td><td>Verified by Captain</td></tr>
     <tr><td>2026-11-07</td><td>Captain's FIAT F3: the food secret is story only (it adds tension but never changes plans). Gate 0 check 9 now covers the forest and bridge-site secrets; 10 of 10 checks pass on Vero's machine</td><td>FIAT issued</td></tr>
     <tr><td>2026-11-07</td><td>Gate 0 built in "oclan-game": 9 of 10 checks pass across all 162 starting conditions. Map tuned (forest spots moved closer, move range 5 to 6) so a sharing team always wins before its food deadline; silent teams win 44%. Check 9 fails: the food secret never changes the team's actions</td><td>In progress</td></tr>
