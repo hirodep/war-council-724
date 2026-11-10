@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 15 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 16 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun: <strong>Gate 0: 10 of 10 checks pass, confirmed independently on Captain's own computer (2026-11-09).</strong> Food secret kept as story only by Captain's FIAT F3. <strong>Mago: pass with notes, source verification pending.</strong> Captain rejected the map tuning and chose FIAT B1 instead (food day 4&ndash;6, look radius 1): <strong>10 of 10 again.</strong> Remaining: Captain reruns the checklist, and Mago checks the source package.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun: <strong>Gate 0: 10 of 10 checks pass, confirmed independently on Captain's own computer (2026-11-09).</strong> Food secret kept as story only by Captain's FIAT F3. <strong>Mago: pass with notes, source verification pending.</strong> Captain rejected the map tuning and chose FIAT B1 instead (food day 4&ndash;6, look radius 1): <strong>10 of 10 again, confirmed on Captain's own computer.</strong> Remaining: Mago checks the source package.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -118,8 +118,8 @@
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 0 checklist on his own computer: 10 of 10 pass</strong>, matching Vero's run.</li>
   <li><span class="ord">Done</span><span class="tag mago">Mago</span><strong>Mago reviewed the Gate 0 report:</strong> pass with notes G0-N1 to G0-N4.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Rejected the map tuning; issued FIAT B1</strong> (food day 4&ndash;6, look radius 1). Gate 0: 10 of 10.</li>
-  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Rerun the checklist with the new rules</strong>: download the ZIP again and run <code>python -m gate0.checklist</code>.<span class="why">Your earlier run used the rejected values.</span></li>
-  <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the updated source package</strong> (GATE0-SOURCE-PACKAGE.md, commit 6040793) plus FIAT B1.<span class="why">Mago's G0-N4: lets him read the actual code, not just its report. Then Gate 0 can be marked IMPLEMENTED / VERIFIED.</span></li>
+  <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Reran the checklist with FIAT B1 rules on his own computer: 10 of 10</strong>, matching Vero's run.</li>
+  <li><span class="ord">1st</span><span class="tag mago">Mago</span><strong>Send Mago the updated source package</strong> (GATE0-SOURCE-PACKAGE.md, commit 6040793) plus FIAT B1.<span class="why">Mago's G0-N4: lets him read the actual code, not just its report. Then Gate 0 can be marked IMPLEMENTED / VERIFIED.</span></li>
 </ol>
 </section>
 
@@ -578,6 +578,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-09</td><td>Captain reruns Gate 0 on his own computer with FIAT B1 rules (commit 6040793): 10 of 10, identical to Vero's run. Only Mago's source review remains before Gate 0 is IMPLEMENTED / VERIFIED</td><td>Verified by Captain</td></tr>
     <tr><td>2026-11-09</td><td>Captain rejects the Gate 0 map tuning (move 6, forest spots moved), resolving G0-N3. Diagnosis: all 24 unwinnable games had food on day 3, and a fully informed team wins all of them. <strong>FIAT B1:</strong> food runs out on day 4&ndash;6 (was 3&ndash;5) and look radius 1 (was 2). Gate 0: 10 of 10; sharing 162/162, silent 52%</td><td>FIAT issued</td></tr>
     <tr><td>2026-11-09</td><td>Mago reviews the Gate 0 report: pass with notes, source verification pending. G0-N1 (finishing on the food day counts) written into the contract; G0-N2 (food is story only) already recorded by FIAT F3; G0-N3 (move 6, forest spots) sent to Captain for ratification; G0-N4 source package prepared at commit 5a48459</td><td>Pass with notes</td></tr>
     <tr><td>2026-11-09</td><td>Captain runs the Gate 0 checklist on his own computer (Windows, Python 3.14.3): 10 of 10 checks pass, identical to Vero's run. Independent check 1 of 2 for Gate 0 complete; Mago's review pending</td><td>Verified by Captain</td></tr>
