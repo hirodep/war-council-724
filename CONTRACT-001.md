@@ -133,9 +133,9 @@ Each gate must pass before the next starts. Hours are rough estimates out of 96.
 
 | Gate | Goal | Done when | Est. hours |
 |---|---|---|---|
-| 0 | Winnable, fair rules | The Gate 0 checklist below passes | 12 |
-| 1 | World engine | The full rule set runs, with Momo checking every action | 15 |
-| 2 | Save and replay | Stopping mid-game and restarting loses nothing; replays match exactly | 10 |
+| 0 | Winnable, fair rules | The Gate 0 checklist below passes. **IMPLEMENTED / VERIFIED 2026-11-09** (commit 6040793; Vero, Captain and Mago each ran 10/10) | 12 |
+| 1 | World engine | The full rule set runs, with Momo checking every action. **Must include Mago's G1-N1:** nobody crosses the river except over the finished bridge, tested before and after completion | 15 |
+| 2 | Save and replay | Stopping mid-game and restarting loses nothing; replays match exactly. **Must include Mago's G1-N2:** replay checks compare the ordered event log and the state after every action, not just the final state | 10 |
 | 3 | AI teammates | The three AI characters play through the action menu only, within the budget | 20 |
 | 4 | Real cooperation | Passes the 5 cooperation tests (below) | 14 |
 | 5 | Captain plays | Captain plays full sessions and judges whether it's fun | 10 |
