@@ -56,23 +56,25 @@ A storm broke the river bridge. The village's food is running out, and the field
 |---|---|
 | Map | 10×10. A river runs north to south; the only crossing is the broken bridge |
 | Start | Everyone starts in the village square |
-| Move | Up to **6** squares per action (Gate 0 tuning; was 5; **awaiting Captain's ratification**, Mago G0-N3) |
-| Look | See everything within 2 squares |
+| Move | Up to 5 squares per action (Captain rejected the Gate 0 tuning to 6, 2026-11-09) |
+| Look | See everything within **1** square (**Captain's FIAT B1**, 2026-11-09; was 2) |
 | Gather | +2 wood per action, standing on a forest square |
 | Carry | Each character carries at most 4 wood |
 | Give | Hand wood to a character on the same square |
 | Build | Put your wood into the bridge, standing at the correct bridge site |
 | Say | Send one message to the team (costs an action; see Card D) |
 | Win | 12 wood built into the correct bridge site before the food runs out. **Finishing during the food day itself counts** (Mago G0-N1): the food check happens only at the end of that day, after every action |
-| Lose | Food runs out first. **Rev 2: a hidden day from 3 to 5** (was 4 to 6) |
+| Lose | Food runs out first: a hidden day from **4 to 6** (**Captain's FIAT B1**, 2026-11-09; Rev 2 had 3 to 5) |
 
 **The secrets.** Each AI character knows one thing the others don't. They change every game.
 
 | Secret | Why it matters |
 |---|---|
-| Where the forest is (one of 3 possible spots: (1,1), (1,8) or (3,3) after Gate 0 tuning; was (0,0), (0,9), (3,2); **awaiting Captain's ratification**) | Others must search or be told |
+| Where the forest is (one of 3 possible spots: (0,0), (0,9) or (3,2)) | Others must search or be told |
 | Which of 3 riverbank spots is the real bridge site | Building at a wrong spot wastes the action |
-| On which day the food runs out (3, 4 or 5) | Decides whether the team can afford to explore or must rush |
+| On which day the food runs out (4, 5 or 6) | Decides whether the team can afford to explore or must rush |
+
+**Captain's FIAT B1 (2026-11-09): food day 4–6 and look radius 1.** With food on day 3, 24 of 162 games could not be won even with perfect sharing, because messages arrive the next morning. Day 3 existed only to make the food secret matter, and FIAT F3 had already made it story only. A shorter look keeps sharing important. Gate 0 result with these rules: sharing team 162/162, silent team 52%. Captain rejected the alternative tuning (move range 6, forest spots moved).
 
 **Captain's FIAT F3 (2026-11-07): the food secret is story only.** Gate 0 proved that in a pure race, knowing the deadline never changes the team's plan. Captain chose to keep it as story and tension rather than add a rule. Gate 0 check 9 applies to the forest and bridge-site secrets only.
 
