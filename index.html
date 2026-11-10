@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 19 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 20 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): built, 8 of 8 on Vero's machine.</strong> Captain can now play by typing his moves, with stand-in bots as teammates. <strong>Captain confirmed 8 of 8 on his own computer.</strong> Waiting for Mago's review.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 11 of 11 on Vero's machine</strong>, now including Captain's play-test fixes (numbered menus, numbered map, O/X marks, hints, tutorial). Waiting for Captain's run and Mago's review.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -122,8 +122,10 @@
   <li><span class="ord">Done</span><span class="tag mago">Mago</span><strong>Mago ran the source himself: 10 of 10. Gate 0 marked IMPLEMENTED / VERIFIED.</strong></li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built Gate 1:</strong> river crossing fixed (G1-N1), broken actions refused, Captain's play screen. 8 of 8; Gate 0 still 10 of 10.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 1 checklist on his own computer: 8 of 8.</strong></li>
-  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Play the game for the first time:</strong> <code>python -m broken_bridge.play</code><span class="why">First taste of whether it's fun, the real goal.</span></li>
-  <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review.</li>
+  <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>First play-test:</strong> won on day 3, but "not fun, confusing from the very beginning." Asked for map labels, a clear list of actions, and a tutorial.</li>
+  <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built the play-test fixes</strong> (Captain's FIAT): numbered menus, numbered map, O/X marks, hints, 5-lesson tutorial. Gate 1: 11 of 11.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Download the new ZIP; run <code>python -m gate1.checklist</code>; then try <code>python -m broken_bridge.tutorial</code></strong><span class="why">Is it clear now? Fun is the only real pass mark.</span></li>
+  <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review (Vero will rebuild it after Captain's run).</li>
 </ol>
 </section>
 
@@ -582,6 +584,8 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-09</td><td>Captain's play-test fixes built (FIAT): pick numbers from menus instead of typing commands; numbers on the map edges; O = confirmed, X = ruled out (Captain's idea); hint key; 5-lesson tutorial. Menus are built only from what Captain knows, so they can't reveal a secret. Gate 1: 11 of 11</td><td>Built</td></tr>
+    <tr><td>2026-11-09</td><td><strong>First human play-test.</strong> Captain won on day 3 but found it not fun: confusing from the start, no labels on the map, unclear which actions existed. Captain approved: numbered menus, map labels, O/X marks and a guided tutorial (FIAT)</td><td>FIAT issued</td></tr>
     <tr><td>2026-11-09</td><td>Captain runs the Gate 1 checklist on his own computer: 8 of 8, identical to Vero's run. Source package for Mago prepared</td><td>Verified by Captain</td></tr>
     <tr><td>2026-11-09</td><td>Gate 1 built (commit 54fd1bb): the river can only be crossed over the finished bridge (G1-N1); broken actions are refused and never crash; refused actions are logged and change nothing; Captain plays by typing commands, with stand-in bots for Mago, Vero and Teso until Gate 3. 8 of 8 on Vero's machine; Gate 0 still 10 of 10. $0 AI spend</td><td>Built, awaiting checks</td></tr>
     <tr><td>2026-11-09</td><td><strong>Gate 0 IMPLEMENTED / VERIFIED</strong>, pass with notes. Mago independently ran the source at commit 6040793: 10/10, exit code 0. G0-N1 to G0-N4 resolved. Carried forward: G1-N1 (the move rule lets characters jump over the river; Gate 1 must block it) and G1-N2 (replay must check the ordered event log and intermediate states, Gate 1 or 2)</td><td>IMPLEMENTED / VERIFIED</td></tr>
