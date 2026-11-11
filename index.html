@@ -42,7 +42,7 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 28 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-11 &middot; Board version: 29 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
@@ -132,10 +132,30 @@
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 1 checklist on his own computer: 16 of 16</strong>, matching Vero's run. Played game 0 in color: won on day 3.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Step-by-step play-through</strong> with screenshots. Likes the colors. Found the big mismatch: he expected turns (I act, they act), but had to plan all 3 actions blind. <strong>FIAT: round by round is the only way to play.</strong></li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built round-by-round play</strong> (commit 2595b37): pick one action, everyone acts, map updates, three times a day. AI teammates still plan once per morning, so the budget is unchanged. Gate 1: 17 of 17.</li>
-  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Rerun the checklist (17 checks)</strong>, continue the step-by-step play-through, then decide the Look card.</li>
+  <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Played 3 more games step by step</strong> (2026-11-11). Green F and B approved. In the last game Captain built first (4/12); in the two before, the bots built all 12.</li>
+  <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Fixed 3 small bugs</strong> (commit 2c12f4b): final screen said "Yesterday you"; end message now shows the full replay command; "Tell the team" accepts a typed message. Gate 1: 17 of 17.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Next session:</strong> rerun the checklist (17 checks), then decide what to tackle from the open findings below. Vero recommends starting with "the game doesn't need Captain."</li>
   <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review (Vero will rebuild it after Captain's run).</li>
 </ol>
 </section>
+
+
+<h3>Open play-test findings (2026-11-11) &mdash; not yet decided</h3>
+<table>
+  <thead><tr><th>#</th><th>Finding</th><th>Size</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Look is nearly useless: range 1, forest only, and never warns when nothing can be in range</td><td>Decision card</td><td>PROPOSED (Vero's pick: bigger range, also checks bridge sites)</td></tr>
+    <tr><td>2</td><td>A refused Gather on a fake forest doesn't mark it X</td><td>Small</td><td>PROPOSED</td></tr>
+    <tr><td>3</td><td>Stand-in bots tell every secret on day 1, so Captain never gets to find anything</td><td>Big design</td><td>PROPOSED</td></tr>
+    <tr><td>4</td><td>The bots can win without Captain (bots built all 12 wood in 2 of 3 games)</td><td>Big design</td><td>PROPOSED (Vero: top priority)</td></tr>
+    <tr><td>5</td><td>People hide map marks (M over F, C over B, C over teammates)</td><td>Small</td><td>PROPOSED</td></tr>
+    <tr><td>6</td><td>Too-far moves always go sideways first; Captain can't choose the path (typing works)</td><td>Small</td><td>PROPOSED</td></tr>
+    <tr><td>7</td><td>Final screen said "Yesterday you"</td><td>Small</td><td>Fixed</td></tr>
+    <tr><td>8</td><td>End message didn't show the full replay command</td><td>Small</td><td>Fixed</td></tr>
+    <tr><td>9</td><td>"Tell the team" rejected a typed message</td><td>Small</td><td>Fixed (stand-in bots still can't read free text until Gate 3)</td></tr>
+    <tr><td>10</td><td>Auto-haul counts only Captain's wood, not the team's, so it walks back for wood the bridge no longer needs</td><td>Small</td><td>PROPOSED</td></tr>
+  </tbody>
+</table>
 
 <h2>Captain's answers (2026-11-07)</h2>
 <table>
@@ -592,6 +612,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-11</td><td>Captain plays 3 more games step by step. Approves green F and B. Vero fixes 3 small bugs (commit 2c12f4b): "Yesterday you" on the final screen, the replay command, typed team messages. 10 play-test findings filed (table above): 3 fixed, 7 open. Session ends; continue tomorrow</td><td>Built; findings filed</td></tr>
     <tr><td>2026-11-11</td><td>Captain's idea: the real forest and bridge site now show as green <strong>F</strong> and <strong>B</strong> instead of two identical O's (two letters like "FF" would break the map columns). Check 7 now tests the letters Captain actually sees (commit a291909). Gate 1 still 17 of 17. Play-through findings filed for later: Look nearly useless; refused Gather doesn't mark X; bots share every secret on day 1; bots can win without Captain (twice); people hide map marks; too-far moves choose the path; "Yesterday you" on the final screen</td><td>Built; findings filed</td></tr>
     <tr><td>2026-11-11</td><td>Captain's request: the action line now starts with the day, e.g. "Day 2: Action 1 of 3" (commit 9bfdc40). Gate 1 still 17 of 17</td><td>Built</td></tr>
     <tr><td>2026-11-11</td><td><strong>FIAT: round by round.</strong> Captain expected turns but had to plan 3 actions blind. Now Captain picks one action, then everyone acts and the map updates, 3 times a day; this is the only mode. AI teammates still plan once per morning (Card A1), so the budget is unchanged. Built (commit 2595b37); check 17 added; auto-haul now re-plans each round. Gate 1: 17 of 17</td><td>FIAT issued; built</td></tr>
