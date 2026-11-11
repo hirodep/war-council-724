@@ -42,7 +42,7 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-11 &middot; Board version: 29 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-11 &middot; Board version: 30 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
@@ -139,6 +139,19 @@
 </ol>
 </section>
 
+
+
+<h3>Council debate item (PROPOSED by Captain, 2026-11-11): only a few NPCs think</h3>
+<p><strong>Captain's idea:</strong> a few NPCs act with reason (real AI: see, remember, decide), while the rest follow the game's natural order. If every NPC reacts to everything, the game becomes a mess.</p>
+<table>
+  <thead><tr><th>Layer</th><th>Who</th><th>How they work</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>Thinkers</td><td>A few named characters (Mago, Vero, Teso, a clan leader)</td><td>Real AI: see what players do, remember it, decide with reasons. Momo still checks every action</td><td>AI decisions (within the caps)</td></tr>
+    <tr><td>Rule-followers</td><td>Villagers, shopkeepers, guards</td><td>Plain code that still notices players, e.g. "bad reputation: prices go up, guard blocks the gate"</td><td>Free</td></tr>
+    <tr><td>Background</td><td>Animals, crowds, weather</td><td>Fixed patterns: wander, sleep, follow the day cycle</td><td>Free</td></tr>
+  </tbody>
+</table>
+<p class="meta">Open questions for the council: how many thinkers per session fit the 30-decision cap (Teso); how memory and reputation are stored and checked (Mago); what wakes a thinker (Vero suggests important events only: gifts, broken promises, revealed secrets). Captain's example "two players both invite an NPC to their clan" is the first test scenario. Captain does not like senseless slashing; whether violence is allowed, costly or disallowed is left to council debate.</p>
 
 <h3>Open play-test findings (2026-11-11) &mdash; not yet decided</h3>
 <table>
@@ -612,6 +625,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-11</td><td>Captain proposes for council debate: only a few NPCs think with real AI; the rest follow game rules (three layers: thinkers, rule-followers, background). Sent to Mago and Teso for review</td><td>PROPOSED</td></tr>
     <tr><td>2026-11-11</td><td>Captain plays 3 more games step by step. Approves green F and B. Vero fixes 3 small bugs (commit 2c12f4b): "Yesterday you" on the final screen, the replay command, typed team messages. 10 play-test findings filed (table above): 3 fixed, 7 open. Session ends; continue tomorrow</td><td>Built; findings filed</td></tr>
     <tr><td>2026-11-11</td><td>Captain's idea: the real forest and bridge site now show as green <strong>F</strong> and <strong>B</strong> instead of two identical O's (two letters like "FF" would break the map columns). Check 7 now tests the letters Captain actually sees (commit a291909). Gate 1 still 17 of 17. Play-through findings filed for later: Look nearly useless; refused Gather doesn't mark X; bots share every secret on day 1; bots can win without Captain (twice); people hide map marks; too-far moves choose the path; "Yesterday you" on the final screen</td><td>Built; findings filed</td></tr>
     <tr><td>2026-11-11</td><td>Captain's request: the action line now starts with the day, e.g. "Day 2: Action 1 of 3" (commit 9bfdc40). Gate 1 still 17 of 17</td><td>Built</td></tr>
