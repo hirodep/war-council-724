@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 23 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 24 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 15 of 15 on Vero's machine</strong>, now including both rounds of Captain's play-test fixes (numbered menus, map labels, O/X marks, hints; screen redraw, Auto-haul, short tutorial). Captain ran it on his own computer: 15 of 15. Waiting for Captain's play-test, then Mago's review.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 16 of 16 on Vero's machine</strong>, now including both rounds of Captain's play-test fixes (numbered menus, map labels, O/X marks, hints; screen redraw, Auto-haul, short tutorial). Captain ran the 15-check version on his own computer: 15 of 15; screen colors added since (check 16). Waiting for Captain's rerun and the Look decision, then Mago's review.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -127,7 +127,9 @@
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Second play-test:</strong> better, but too many words; scrolling loses his train of thought; hauling wood is repetitive; tutorial overwhelming.</li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built the second round of fixes</strong> (FIAT, commit bb27163): the screen clears and redraws before every choice; Auto-haul (stop with S any morning; it also stops itself if Momo refuses anything); tutorial cut to 1&ndash;2 lines per lesson. Gate 1: 15 of 15.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 1 checklist on his own computer: 15 of 15</strong>, matching Vero's run.</li>
-  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Play-test again</strong> and say whether it's clearer and more fun.</li>
+  <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Finished the new tutorial.</strong> The fixed grid helps; asked for color so lines are easier to tell apart. Asked what Look does: it checks only 1 square around you, only for the forest, so it is nearly a wasted action (Look decision card pending).</li>
+  <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Added screen colors</strong> (FIAT, commit in oclan-game): you yellow, team cyan, O green, X red, river blue, lessons magenta, warnings red. Looks only; <code>--plain</code> turns them off. Gate 1: 16 of 16.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Rerun the checklist (16 checks), play a real game in color</strong>, and decide the Look card.</li>
   <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review (Vero will rebuild it after Captain's run).</li>
 </ol>
 </section>
@@ -587,6 +589,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-10</td><td>Captain finishes the new tutorial: the fixed grid helps. FIAT: add screen colors for human eyes (no cost, looks only). Built: check 16 proves the colored and plain screens say exactly the same words. Gate 1: 16 of 16. Open question from Captain: Look is nearly useless (range 1, forest only); a refused Gather also doesn't mark the spot X. Look decision card pending</td><td>FIAT issued; built</td></tr>
     <tr><td>2026-11-10</td><td>Captain runs the 15-check Gate 1 checklist on his own computer (commit bb27163): 15 of 15, identical to Vero's run</td><td>Verified by Captain</td></tr>
     <tr><td>2026-11-10</td><td>Second round of play-test fixes built (FIAT, commit bb27163): the screen clears and redraws before every choice and fits in 30 rows; Auto-haul appears once Captain knows the real forest and site, repeats gather, carry, build, asks each morning (Enter = go on, S = stop) and stops itself if Momo refuses anything; tutorial lessons are 1&ndash;2 lines. Four new checks (12&ndash;15). Gate 1: 15 of 15; Gate 0 still 10 of 10. $0 AI spend</td><td>Built</td></tr>
     <tr><td>2026-11-09</td><td><strong>Second play-test.</strong> Better than before, but too much text and scrolling; once the forest and bridge are known, hauling is repetitive chores. Insight: the fun is in finding and sharing secrets. Captain approved (FIAT): (1) the screen clears and redraws after every action, (2) an auto-haul option repeats gather, carry, build until the bridge is done (Momo still checks every step; Captain can stop anytime), (3) a much shorter tutorial</td><td>FIAT issued</td></tr>
