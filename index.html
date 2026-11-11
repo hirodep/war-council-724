@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-07 evening &middot; Board version: 21 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 22 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 11 of 11 on Vero's machine</strong>, now including Captain's play-test fixes (numbered menus, numbered map, O/X marks, hints, tutorial). Waiting for Captain's run and Mago's review.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 15 of 15 on Vero's machine</strong>, now including both rounds of Captain's play-test fixes (numbered menus, map labels, O/X marks, hints; screen redraw, Auto-haul, short tutorial). Waiting for Captain's run and play-test, then Mago's review.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -125,8 +125,8 @@
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>First play-test:</strong> won on day 3, but "not fun, confusing from the very beginning." Asked for map labels, a clear list of actions, and a tutorial.</li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built the play-test fixes</strong> (Captain's FIAT): numbered menus, numbered map, O/X marks, hints, 5-lesson tutorial. Gate 1: 11 of 11.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Second play-test:</strong> better, but too many words; scrolling loses his train of thought; hauling wood is repetitive; tutorial overwhelming.</li>
-  <li><span class="ord">1st</span><span class="tag vero">Vero</span><strong>Build the second round of fixes</strong> (FIAT): screen refreshes after every action, auto-haul option, much shorter tutorial.</li>
-  <li><span class="ord">2nd</span><span class="tag cmd">Captain</span><strong>Try it again</strong> and say whether it's clearer and more fun.</li>
+  <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built the second round of fixes</strong> (FIAT, commit bb27163): the screen clears and redraws before every choice; Auto-haul (stop with S any morning; it also stops itself if Momo refuses anything); tutorial cut to 1&ndash;2 lines per lesson. Gate 1: 15 of 15.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Run the 15-check Gate 1 checklist</strong> on his own computer, then <strong>play-test again</strong> and say whether it's clearer and more fun.</li>
   <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review (Vero will rebuild it after Captain's run).</li>
 </ol>
 </section>
@@ -586,6 +586,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-10</td><td>Second round of play-test fixes built (FIAT, commit bb27163): the screen clears and redraws before every choice and fits in 30 rows; Auto-haul appears once Captain knows the real forest and site, repeats gather, carry, build, asks each morning (Enter = go on, S = stop) and stops itself if Momo refuses anything; tutorial lessons are 1&ndash;2 lines. Four new checks (12&ndash;15). Gate 1: 15 of 15; Gate 0 still 10 of 10. $0 AI spend</td><td>Built</td></tr>
     <tr><td>2026-11-09</td><td><strong>Second play-test.</strong> Better than before, but too much text and scrolling; once the forest and bridge are known, hauling is repetitive chores. Insight: the fun is in finding and sharing secrets. Captain approved (FIAT): (1) the screen clears and redraws after every action, (2) an auto-haul option repeats gather, carry, build until the bridge is done (Momo still checks every step; Captain can stop anytime), (3) a much shorter tutorial</td><td>FIAT issued</td></tr>
     <tr><td>2026-11-09</td><td>Captain's play-test fixes built (FIAT): pick numbers from menus instead of typing commands; numbers on the map edges; O = confirmed, X = ruled out (Captain's idea); hint key; 5-lesson tutorial. Menus are built only from what Captain knows, so they can't reveal a secret. Gate 1: 11 of 11</td><td>Built</td></tr>
     <tr><td>2026-11-09</td><td><strong>First human play-test.</strong> Captain won on day 3 but found it not fun: confusing from the start, no labels on the map, unclear which actions existed. Captain approved: numbered menus, map labels, O/X marks and a guided tutorial (FIAT)</td><td>FIAT issued</td></tr>
