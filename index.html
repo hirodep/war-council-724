@@ -42,12 +42,12 @@
 <main>
 
 <h1>O'Clan Headquarters</h1>
-<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 25 &middot; Record keeper: Vero</p>
+<p class="meta">O'CC Board (O'Clan Council Board) &middot; Last updated: 2026-11-10 &middot; Board version: 26 &middot; Record keeper: Vero</p>
 
 <p class="note"><strong>For council members (Mago, Teso, Vero):</strong> this board is the single source of truth. Read it at the start of every session. If your chat memory disagrees with this board, the board wins. Reply through Captain Hiro; Vero files every reply here. Captain has final say by FIAT.</p>
 
 <h2>Open topic: Proposal 001 &mdash; our original game</h2>
-<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 16 of 16 on Vero's machine</strong>, now including both rounds of Captain's play-test fixes (numbered menus, map labels, O/X marks, hints; screen redraw, Auto-haul, short tutorial). Captain ran all 16 on his own computer: 16 of 16. Waiting for the Look decision, then Mago's review.</p>
+<p>Codenames: <strong>Shangri-La Frontier &times; Champloo</strong>. A persistent world where humans and AI agents play together under the same rules. <strong>All three members have responded, and all three say Support with conditions.</strong> Captain answered both questions and resolved all four disagreements by FIAT. Construction is not yet authorized. <strong><a href="contract-001.html">Construction Contract 001, Revision 2</a> is approved by the whole council and by <strong>Captain's construction FIAT (2026-11-07)</strong>. Construction has begun. <strong>Gate 0: IMPLEMENTED / VERIFIED (2026-11-09), pass with notes.</strong> Vero, Captain and Mago each ran the checklist independently: 10 of 10. <strong>Gate 1 (world engine): 17 of 17 on Vero's machine</strong>, now including both rounds of Captain's play-test fixes (numbered menus, map labels, O/X marks, hints; screen redraw, Auto-haul, short tutorial). Captain ran the 16-check version on his own computer: 16 of 16; round-by-round play added since (check 17). Waiting for Captain's rerun and the Look decision, then Mago's review.</p>
 <table>
   <thead><tr><th>Member</th><th>AI</th><th>Role</th><th>Status</th><th>Verdict</th></tr></thead>
   <tbody>
@@ -130,7 +130,9 @@
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Finished the new tutorial.</strong> The fixed grid helps; asked for color so lines are easier to tell apart. Asked what Look does: it checks only 1 square around you, only for the forest, so it is nearly a wasted action (Look decision card pending).</li>
   <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Added screen colors</strong> (FIAT, commit in oclan-game): you yellow, team cyan, O green, X red, river blue, lessons magenta, warnings red. Looks only; <code>--plain</code> turns them off. Gate 1: 16 of 16.</li>
   <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Ran the Gate 1 checklist on his own computer: 16 of 16</strong>, matching Vero's run. Played game 0 in color: won on day 3.</li>
-  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Decide the Look card</strong>, and say how the colored game felt.</li>
+  <li><span class="ord">Done</span><span class="tag cmd">Captain</span><strong>Step-by-step play-through</strong> with screenshots. Likes the colors. Found the big mismatch: he expected turns (I act, they act), but had to plan all 3 actions blind. <strong>FIAT: round by round is the only way to play.</strong></li>
+  <li><span class="ord">Done</span><span class="tag vero">Vero</span><strong>Built round-by-round play</strong> (commit 2595b37): pick one action, everyone acts, map updates, three times a day. AI teammates still plan once per morning, so the budget is unchanged. Gate 1: 17 of 17.</li>
+  <li><span class="ord">1st</span><span class="tag cmd">Captain</span><strong>Rerun the checklist (17 checks)</strong>, continue the step-by-step play-through, then decide the Look card.</li>
   <li><span class="ord">2nd</span><span class="tag mago">Mago</span><strong>Send Mago the Gate 1 source package</strong> for review (Vero will rebuild it after Captain's run).</li>
 </ol>
 </section>
@@ -590,6 +592,7 @@
 <table>
   <thead><tr><th>Date</th><th>Decision</th><th>Result</th></tr></thead>
   <tbody>
+    <tr><td>2026-11-11</td><td><strong>FIAT: round by round.</strong> Captain expected turns but had to plan 3 actions blind. Now Captain picks one action, then everyone acts and the map updates, 3 times a day; this is the only mode. AI teammates still plan once per morning (Card A1), so the budget is unchanged. Built (commit 2595b37); check 17 added; auto-haul now re-plans each round. Gate 1: 17 of 17</td><td>FIAT issued; built</td></tr>
     <tr><td>2026-11-11</td><td>Captain runs the 16-check Gate 1 checklist on his own computer (commit b84f0aa): 16 of 16, identical to Vero's run. Plays game 0 in color and wins on day 3; the stand-in bots placed all 12 wood while Captain was still carrying 4</td><td>Verified by Captain</td></tr>
     <tr><td>2026-11-10</td><td>Captain finishes the new tutorial: the fixed grid helps. FIAT: add screen colors for human eyes (no cost, looks only). Built: check 16 proves the colored and plain screens say exactly the same words. Gate 1: 16 of 16. Open question from Captain: Look is nearly useless (range 1, forest only); a refused Gather also doesn't mark the spot X. Look decision card pending</td><td>FIAT issued; built</td></tr>
     <tr><td>2026-11-10</td><td>Captain runs the 15-check Gate 1 checklist on his own computer (commit bb27163): 15 of 15, identical to Vero's run</td><td>Verified by Captain</td></tr>
